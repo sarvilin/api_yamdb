@@ -20,9 +20,9 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         for model, csv_f in TABLES.items():
             with open(
-                f'{settings.BASE_DIR}/static/data/{csv_f}',
-                'r',
-                encoding='utf-8'
+                    f'{settings.BASE_DIR}/static/data/{csv_f}',
+                    'r',
+                    encoding='utf-8'
             ) as csv_file:
                 reader = csv.DictReader(csv_file)
                 model.objects.bulk_create(
