@@ -1,4 +1,4 @@
-# Проект YaMDb собирает отзывы пользователей на произведения.
+# Проект YaMDb по сбору отзывов на произведения.
 
 ## Описание
 Проект по сбору отзывов на произведения (фильмы, книги, музыка) 
@@ -13,19 +13,16 @@
 
 Сами произведения в YaMDb не хранятся.
 
-Читатели оставляют к произведениям текстовые отзывы и выставляют
-произведению рейтинг (оценку в диапазоне от одного до десяти). 
+Зарегистрированные пользователи оставляют к произведениям текстовые отзывы
+и выставляют произведению рейтинг (оценку в диапазоне от одного до десяти). 
 По оценкам автоматически высчитывается средняя оценка произведения.
 
-Добавлена документация (ReDoc).
-Полная документация к API:  http://84.252.138.138/redoc
+Полная документация к API:  http://127.0.0.1:8000/redoc
 
-###  Технологии
-- Python 3.7
-- Django 2.2.19
-- DjangoREST framework 3.12.4
-- JWT
-
+## Технологии
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=Django)](https://www.djangoproject.com/)
+[![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat-square&logo=Django%20REST%20Framework)](https://www.django-rest-framework.org/)
 
 ### Как запустить проект:
 
@@ -34,7 +31,6 @@
 ```
 git clone https://github.com/sarvilin/api_yamdb.git
 ```
-
 ```
 cd api_yamdb
 ```
@@ -42,13 +38,11 @@ cd api_yamdb
 Cоздать и активировать виртуальное окружение:
 
 ```
-python3 -m venv env
+python3 -m venv venv
 ```
-
 ```
-source env/bin/activate
+source venv/bin/activate
 ```
-
 ```
 python3 -m pip install --upgrade pip
 ```
@@ -74,14 +68,14 @@ python3 manage.py runserver
 ## Участники:
 
 [Сарвилин Алексей.](https://github.com/sarvilin/api_yamdb) 
-- Категории (Categories), жанры (Genres) и произведения (Titles): модели, view и эндпойнты для них и рейтинги. 
+- Категории, жанры, произведения и рейтинги: модели, view и эндпойнты для них.
 - Докеризация, разработка процесса CI (непрерывной интеграции) с использованием GitHub Actions. 
 - Подготовка  к production и deploy на YandexCloud.
 
 [Панасенков Денис.](https://github.com/uchastnik/api_yamdb)
-Управление пользователями (Auth и Users): система регистрации и аутентификации, права доступа, работа с токеном, система подтверждения e-mail, поля.
+Управление пользователями (Auth и Users): система регистрации и аутентификации, права доступа, работа с токеном, система подтверждения e-mail.
 
 [Анучин Антон.](https://github.com/Homer-Ford/yamdb_final)
-Отзывы (Review) и комментарии (Comments): модели и view, эндпойнты, права доступа для запросов. Рейтинги произведений.
+Отзывы (Review) и комментарии (Comments): модели и view, эндпойнты, права доступа для запросов.
 
-Данный проект создан в рамках обучения Яндекс Практикум.
+Проект создан в рамках обучения Яндекс Практикум.
